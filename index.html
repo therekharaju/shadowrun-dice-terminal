@@ -5,11 +5,12 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Dice</title>
+    <link href="./styles.css" rel="stylesheet">
   </head>
   <body>
-    <input id="command"/>
-    <button type="button" id="btn">Roll</button>
-    <strong id="result"></strong>
+    <input id="command" class="command"/>
+    <button type="button" id="btn" class="butn">&#10148;</button>
+    <span id="result"></span>
     <script src='./renderer.js'></script>
   </body>
 </html>

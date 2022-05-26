@@ -7,6 +7,14 @@ btn.addEventListener('click', async () => {
   resultElement.innerText = result
 })
 
+commandInput.addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+        // Enter key was hit
+        const result = parseCommand(commandInput.value)
+        resultElement.innerText = result
+    }
+})
+
 function parseCommand(command) {
     const dIndex = command.indexOf('d')
     let plusIndex
@@ -32,7 +40,7 @@ function parseCommand(command) {
     for(let i = 0; i < multiplier; i++){
         const singleRoll = Math.floor(Math.random() * (dice) + 1)
         rollResult += singleRoll
-        resultString += "(" + singleRoll + ") + "
+        resultString += "(" + singleRoll + ")+"
     }
     rollResult += add
     return resultString + add + " = " + rollResult
