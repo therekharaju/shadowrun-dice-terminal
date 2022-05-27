@@ -80,9 +80,9 @@ function parseCommand(command) {
             break
         default:
             dicePic.src = 'd20.png'
-            diceElement.style.top = '40%'
-            if(rollResult > 9) diceElement.style.left = '45%'
-            else diceElement.style.left = '48%'
+            diceElement.style.top = '37%'
+            if(rollResult > 9) diceElement.style.left = '42%'
+            else diceElement.style.left = '46%'
             break
     }
 

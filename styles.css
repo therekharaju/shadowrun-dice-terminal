@@ -4,8 +4,9 @@ body {
     overflow: hidden;
     color: rgb(255, 255, 255);
     font: 1.2rem Inconsolata, monospace;
-    text-shadow: 0 0 8px #b777d5;
+    text-shadow: 0 0 5px #c66cf0;
 }
+
 .command {
     border: none !important;
     border-color: transparent !important;
@@ -14,7 +15,7 @@ body {
     background-color: transparent;
     color: rgb(255, 255, 255);
     font: 1.2rem Inconsolata, monospace;
-    text-shadow: 0 0 8px #b777d5;
+    text-shadow: 0 0 5px #c66cf0;
 }
 .butn {
     border: none !important;
@@ -23,7 +24,7 @@ body {
     background-color: transparent;
     color: rgb(255, 255, 255);
     font: 1.2rem Inconsolata, monospace;
-    text-shadow: 0 0 8px #b777d5;
+    text-shadow: 0 0 5px #c66cf0;
 }
 .img {
     width: 200;
@@ -38,6 +39,6 @@ body {
   .centered {
     position: absolute;
     font: 2.5rem Inconsolata, monospace;
-    text-shadow: 0 0 8px #37104a;
+    text-shadow: 0 0 8px #000000;
   }
 /* Add styles here to customize the appearance of your app */
