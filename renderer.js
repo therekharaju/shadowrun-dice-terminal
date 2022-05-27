@@ -45,7 +45,6 @@ function parseCommand(command) {
         rollResult += singleRoll
         resultString += "(" + singleRoll + ")+"
     }
-    rollResult += add
     
     switch(dice){
         case 4:
@@ -85,6 +84,8 @@ function parseCommand(command) {
             else diceElement.style.left = '46%'
             break
     }
+
+    rollResult += add
 
     diceElement.innerText = (rollResult - add).toString();
     return resultString + add + " = " + rollResult

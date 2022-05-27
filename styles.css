@@ -1,11 +1,29 @@
 /* styles.css */
 body {
     background-color: black;
+    background-image: radial-gradient(
+        rgba(150, 0, 117, 0.5), black 100%
+      );
     overflow: hidden;
     color: rgb(255, 255, 255);
     font: 1.2rem Inconsolata, monospace;
-    text-shadow: 0 0 5px #c66cf0;
+    text-shadow: 0 0 5px #e17fff;
 }
+
+body::after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: -webkit-repeating-linear-gradient(
+        top, 
+        rgba(0, 0, 0, 0.15) 4px,
+        rgba(255, 255, 255, 0.15) 6px);
+    pointer-events: none;
+  }
 
 .command {
     border: none !important;
@@ -15,7 +33,7 @@ body {
     background-color: transparent;
     color: rgb(255, 255, 255);
     font: 1.2rem Inconsolata, monospace;
-    text-shadow: 0 0 5px #c66cf0;
+    text-shadow: 0 0 5px #e17fff;
 }
 .butn {
     border: none !important;
@@ -24,7 +42,7 @@ body {
     background-color: transparent;
     color: rgb(255, 255, 255);
     font: 1.2rem Inconsolata, monospace;
-    text-shadow: 0 0 5px #c66cf0;
+    text-shadow: 0 0 5px #e17fff;
 }
 .img {
     width: 200;
@@ -39,6 +57,6 @@ body {
   .centered {
     position: absolute;
     font: 2.5rem Inconsolata, monospace;
-    text-shadow: 0 0 8px #000000;
+    text-shadow: 0 0 8px #e17fff;
   }
 /* Add styles here to customize the appearance of your app */
