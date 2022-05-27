@@ -35,6 +35,9 @@ function parseCommand(command) {
     const multiplier = Number(command.substring(0, dIndex))
     const dice = Number(command.substring(dIndex + 1, plusIndex))
     
+    const dicePic = document.getElementById('dicePic')
+    const diceElement = document.getElementById('diceText')
+
     let resultString = "";
     let rollResult = 0
     for(let i = 0; i < multiplier; i++){
@@ -43,5 +46,46 @@ function parseCommand(command) {
         resultString += "(" + singleRoll + ")+"
     }
     rollResult += add
+    
+    switch(dice){
+        case 4:
+            dicePic.src = 'd4.png'
+            diceElement.style.top = '18%'
+            if(rollResult > 9) diceElement.style.left = '42%'
+            else diceElement.style.left = '45%'
+            break
+        case 6:
+            dicePic.src = 'd6.png'
+            diceElement.style.top = '28%'
+            if(rollResult > 9) diceElement.style.left = '23%'
+            else diceElement.style.left = '28%'
+            break
+        case 8:
+            dicePic.src = 'd8.png'
+            diceElement.style.top = '40%'
+            if(rollResult > 9) diceElement.style.left = '40%'
+            else diceElement.style.left = '45%'
+            break
+        case 10:
+            dicePic.src = 'd10.png'
+            diceElement.style.top = '30%'
+            if(rollResult > 9) diceElement.style.left = '42%'
+            else diceElement.style.left = '45%'
+            break
+        case 12:
+            dicePic.src = 'd12.png'
+            diceElement.style.top = '30%'
+            if(rollResult > 9) diceElement.style.left = '25%'
+            else diceElement.style.left = '30%'
+            break
+        default:
+            dicePic.src = 'd20.png'
+            diceElement.style.top = '40%'
+            if(rollResult > 9) diceElement.style.left = '45%'
+            else diceElement.style.left = '48%'
+            break
+    }
+
+    diceElement.innerText = (rollResult - add).toString();
     return resultString + add + " = " + rollResult
 }

@@ -2,18 +2,18 @@
 body {
     background-color: black;
     overflow: hidden;
-    color: rgb(247, 205, 251);
-    font: 1.3rem Inconsolata, monospace;
+    color: rgb(255, 255, 255);
+    font: 1.2rem Inconsolata, monospace;
     text-shadow: 0 0 8px #b777d5;
 }
 .command {
     border: none !important;
     border-color: transparent !important;
     outline: none !important;
-    width: 100px;
+    width: 80px;
     background-color: transparent;
-    color: rgb(247, 205, 251);
-    font: 1.3rem Inconsolata, monospace;
+    color: rgb(255, 255, 255);
+    font: 1.2rem Inconsolata, monospace;
     text-shadow: 0 0 8px #b777d5;
 }
 .butn {
@@ -21,8 +21,23 @@ body {
     border-color: transparent !important;
     outline: none !important;
     background-color: transparent;
-    color: rgb(247, 205, 251);
-    font: 1.3rem Inconsolata, monospace;
+    color: rgb(255, 255, 255);
+    font: 1.2rem Inconsolata, monospace;
     text-shadow: 0 0 8px #b777d5;
 }
+.img {
+    width: 200;
+    height: auto;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  /* Centered text */
+  .centered {
+    position: absolute;
+    font: 2.5rem Inconsolata, monospace;
+    text-shadow: 0 0 8px #37104a;
+  }
 /* Add styles here to customize the appearance of your app */
