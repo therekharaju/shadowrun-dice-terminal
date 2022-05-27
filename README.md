@@ -1,4 +1,5 @@
 Syntax: NUMBER_OF_DICEdDICE_FACES[MODIFIER]
+
 Examples:
 1d20
 2d12+4
