@@ -45,7 +45,8 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "electron_quick_start"
+            "name": "electron_quick_start",
+            "iconURl" : "dice-target-icon.png"
           }
         },
         {
