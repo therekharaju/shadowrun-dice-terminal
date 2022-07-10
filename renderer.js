@@ -1,3 +1,5 @@
+const diceRoller = require('diceParser.js');
+
 const btn = document.getElementById('btn')
 const commandInput = document.getElementById('command')
 const resultElement = document.getElementById('result')
@@ -16,35 +18,11 @@ commandInput.addEventListener('keydown', function(event) {
 })
 
 function parseCommand(command) {
-    const dIndex = command.indexOf('d')
-    let plusIndex
-    if(command.indexOf('+') === -1){
-        if(command.indexOf('-') === -1){
-            add = 0
-        }
-        else {
-            plusIndex = command.indexOf('-')
-            add = -1 * Number(command.substring(plusIndex + 1))
-        }
-    }
-    else{
-        plusIndex = command.indexOf('+')
-        add = Number(command.substring(plusIndex + 1))
-    }
+    resultString, rollResult, trueResult, dice = 
+        diceRoller.parseCommand(command);
 
-    const multiplier = Number(command.substring(0, dIndex))
-    const dice = Number(command.substring(dIndex + 1, plusIndex))
-    
     const dicePic = document.getElementById('dicePic')
     const diceElement = document.getElementById('diceText')
-
-    let resultString = "";
-    let rollResult = 0
-    for(let i = 0; i < multiplier; i++){
-        const singleRoll = Math.floor(Math.random() * (dice) + 1)
-        rollResult += singleRoll
-        resultString += "(" + singleRoll + ")+"
-    }
     
     switch(dice){
         case 4:
@@ -85,8 +63,6 @@ function parseCommand(command) {
             break
     }
 
-    rollResult += add
-
-    diceElement.innerText = (rollResult - add).toString();
-    return resultString + add + " = " + rollResult
+    diceElement.innerText = (rollResult).toString();
+    return resultString
 }
