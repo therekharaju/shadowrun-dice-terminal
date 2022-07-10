@@ -1,3 +1,66 @@
 /* styles.css */
+body {
+    background-color: black;
+    background-image: radial-gradient(
+        rgba(150, 0, 117, 0.5), black 100%
+      );
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font: 1.2rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #e17fff;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
 
+body::after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: -webkit-repeating-linear-gradient(
+        top, 
+        rgba(0, 0, 0, 0.15) 4px,
+        rgba(255, 255, 255, 0.15) 6px);
+    pointer-events: none;
+  }
+
+.command {
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    width: 80px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font: 1.2rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #e17fff;
+    -webkit-app-region: no-drag !important;
+}
+.butn {
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font: 1.2rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #e17fff;
+    -webkit-app-region: no-drag !important;
+}
+.img {
+    width: 200;
+    height: auto;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  /* Centered text */
+  .centered {
+    position: absolute;
+    font: 2.5rem Inconsolata, monospace;
+    text-shadow: 0 0 8px #e17fff;
+  }
 /* Add styles here to customize the appearance of your app */
