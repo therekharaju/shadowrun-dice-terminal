@@ -1,4 +1,4 @@
-function parseCommand(command){
+function rollDice(command){
     const dIndex = command.indexOf('d')
     let plusIndex
     if(command.indexOf('+') === -1){
@@ -27,8 +27,12 @@ function parseCommand(command){
     }
 
     const trueResult = rollResult + add
-    resultString = resultString + add + " = " + tResult
-    return resultString, rollResult, trueResult, dice
+    resultString = resultString + add + " = " + trueResult
+    return {
+        resultString: resultString, 
+        rollResult: rollResult, 
+        dice: dice
+    }
 }
 
-exports.parseCommand = parseCommand;
+exports.rollDice = rollDice;
